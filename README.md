@@ -1,6 +1,6 @@
 # vue-admin-scaffold
 
-> this ia a vue admin scaffold for [vue-cli]
+> this is a vue admin scaffold for [vue-cli]
 
 ### Build Setup
 

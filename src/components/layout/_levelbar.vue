@@ -16,8 +16,8 @@
 </template>
 <script>
   export default {
-    name: 'page-bar'
-  }
+    name: 'page-bar',
+  };
 </script>
 <style lang="scss">
 </style>

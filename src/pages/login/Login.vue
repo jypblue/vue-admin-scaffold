@@ -54,56 +54,56 @@
   </div>
 </template>
 <script>
-  import { reqLogin } from './api'
+  import { reqLogin } from './api';
 
   export default {
     name: 'login-page',
-    data () {
+    data() {
       return {
         msghide: true,
         loginForm: {
           account: 'admin',
-          checkPass: '123456'
+          checkPass: '123456',
         },
-        checked: true
-      }
+        checked: true,
+      };
     },
     methods: {
-      valid () {
+      valid() {
         // 简单验证是否为空
         if (!this.loginForm.account || !this.loginForm.checkPass) {
-          this.msghide = false
-          return false
+          this.msghide = false;
+          return false;
         }
-        this.msghide = true
-        return true
+        this.msghide = true;
+        return true;
       },
-      handleSubmit () {
-        const valid = this.valid()
+      handleSubmit() {
+        const valid = this.valid();
         if (valid) {
           const loginParams = {
             username: this.loginForm.account,
-            password: this.loginForm.checkPass
-          }
+            password: this.loginForm.checkPass,
+          };
 
           // 发送请求
-          reqLogin(loginParams).then(data => {
-            const { msg, code, user } = data
+          reqLogin(loginParams).then((data) => {
+            const { msg, code, user } = data;
 
             if (code !== 200) {
               this.$message({
                 message: msg,
-                type: 'error'
-              })
+                type: 'error',
+              });
             } else {
-              sessionStorage.setItem('user', JSON.stringify(user))
-              this.$router.push({path: '/'})
+              sessionStorage.setItem('user', JSON.stringify(user));
+              this.$router.push({ path: '/' });
             }
-          })
+          });
         }
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
 <style lang="scss">
   @import '../../scss/pages/login.scss';

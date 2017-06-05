@@ -1,17 +1,17 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import {Users} from './data/user.js';
+import { Users } from './data/user';
 
 export default {
-  mockHttp () {
+  mockHttp() {
     const mock = new MockAdapter(axios);
     // 登录页面
-    mock.onPost('/login').reply(config => {
+    mock.onPost('/login').reply((config) => {
       const { username, password } = JSON.parse(config.data);
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         let user = null;
         setTimeout(() => {
-          let hasUser = Users.some(u => {
+          const hasUser = Users.some((u) => {
             if (u.username === username && u.password === password) {
               user = JSON.parse(JSON.stringify(u));
               user.password = undefined;
@@ -21,12 +21,12 @@ export default {
           });
 
           if (hasUser) {
-            resolve([200, {code: 200, msg: '请求成功', user}])
+            resolve([200, { code: 200, msg: '请求成功', user }]);
           } else {
-            resolve([200, {code: 500, msg: '帐号或密码错误'}])
+            resolve([200, { code: 500, msg: '帐号或密码错误' }]);
           }
         }, 1000);
-      })
+      });
     });
-  }
-}
+  },
+};

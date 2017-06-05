@@ -23,46 +23,46 @@
     </div>
 </template>
 <script>
-import headerlayout from '../components/layout/_header.vue'
-import footerlayout from '../components/layout/_footer.vue'
-import sidebar from '../components/layout/_sidebar.vue'
-import levelbar from '../components/layout/_levelbar.vue'
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
+import headerlayout from '../components/layout/_header.vue';
+import footerlayout from '../components/layout/_footer.vue';
+import sidebar from '../components/layout/_sidebar.vue';
+import levelbar from '../components/layout/_levelbar.vue';
 
 export default {
-  name: 'Home-page',
-  data () {
+  name: 'home-wrap',
+  data() {
     return {
       image: '',
       isClose: false,
-      isIn: false
-    }
+      isIn: false,
+    };
   },
   computed: {
     ...mapGetters([
-      'sidebar'
-    ])
+      'sidebar',
+    ]),
   },
   methods: {
-    toggler (close) {
-      this.isClose = close
+    toggler(close) {
+      this.isClose = close;
     },
-    togglerIn (isIn) {
-      this.isIn = isIn
-    }
+    togglerIn(isIn) {
+      this.isIn = isIn;
+    },
   },
   components: {
     headerlayout,
     footerlayout,
     sidebar,
-    levelbar
+    levelbar,
   },
-  mounted () {
+  mounted() {
     // 可以获得子组件的引用
     this.$refs.sidebar.$on('is-close', function (isclose) { // eslint-disable-line
-    })
-  }
-}
+    });
+  },
+};
 </script>
 <style lang="scss">
 

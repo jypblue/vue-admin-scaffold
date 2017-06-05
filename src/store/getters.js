@@ -1,5 +1,5 @@
-const sidebar = state => state.sidemenu.sidebar
+const sidebar = state => state.sidemenu.sidebar;
 
 export {
-  sidebar
-}
+  sidebar,
+};

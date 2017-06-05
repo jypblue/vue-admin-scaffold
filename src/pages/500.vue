@@ -17,34 +17,34 @@
 </template>
 <script>
   export default {
-    name: 'page-404',
-    data () {
+    name: 'page-500',
+    data() {
       return {
-        number: 6
-      }
+        number: 6,
+      };
     },
     methods: {
-      count () {
+      count() {
         const countdown = () => {
-          let bh = null
+          let bh = null;
           if (this.number === 0) {
-            clearTimeout(bh)
-            this.$router.push({path: '/'})
+            clearTimeout(bh);
+            this.$router.push({ path: '/' });
           } else {
-            this.number--
+            this.number--;
           }
-          bh = setTimeout(countdown, 1000)
-        }
-        countdown()
+          bh = setTimeout(countdown, 1000);
+        };
+        countdown();
       },
-      backHome () {
-        this.$router.push({path: '/'})
-      }
+      backHome() {
+        this.$router.push({ path: '/' });
+      },
     },
-    mounted () {
-      this.count()
-    }
-  }
+    mounted() {
+      this.count();
+    },
+  };
 </script>
 <style lang="scss">
   @import '../scss/pages/error.scss';

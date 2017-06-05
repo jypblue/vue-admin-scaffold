@@ -11,12 +11,12 @@
 <script>
   export default {
     name: 'footerlayout',
-    data () {
+    data() {
       return {
-        dateYear: +new Date().getFullYear()
-      }
-    }
-  }
+        dateYear: +new Date().getFullYear(),
+      };
+    },
+  };
 </script>
 <style lang="scss">
 

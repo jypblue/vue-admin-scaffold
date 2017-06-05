@@ -1,18 +1,18 @@
-import * as types from '../../mutation-types'
+import * as types from '../../mutation-types';
 
 const state = {
   sidebar: {
-    opened: false
-  }
-}
+    opened: false,
+  },
+};
 
 const mutations = {
-  [types.TOGGLE_SIDEBAR] (state, opened) {
-    state.sidebar.opened = opened
-  }
-}
+  [types.TOGGLE_SIDEBAR](State, opened) {
+    State.sidebar.opened = opened;
+  },
+};
 
 export default {
   state,
-  mutations
-}
+  mutations,
+};

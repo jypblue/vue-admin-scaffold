@@ -56,34 +56,34 @@
   export default {
     name: 'sidebar',
     props: ['isIn'],
-    data () {
+    data() {
       return {
         openIndex: 0,
-        isClose: false
-      }
+        isClose: false,
+      };
     },
     methods: {
-      sidebarToggler () {
-        this.isClose = !this.isClose
-        this.$emit('is-close', this.isClose)
+      sidebarToggler() {
+        this.isClose = !this.isClose;
+        this.$emit('is-close', this.isClose);
       },
-      isOpen (index) {
-        return index === this.openIndex
+      isOpen(index) {
+        return index === this.openIndex;
       },
-      openToggler (index) {
+      openToggler(index) {
         if (this.openIndex === index) {
-          this.openIndex = 0
+          this.openIndex = 0;
         } else {
-          this.openIndex = index
+          this.openIndex = index;
         }
-      }
+      },
     },
-    mounted () {
+    mounted() {
         // console.log(this.$router.options.routes);
     },
-    beforeDestroy () {
-    }
-  }
+    beforeDestroy() {
+    },
+  };
 </script>
 <style lang="scss">
 

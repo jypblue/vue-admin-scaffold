@@ -153,60 +153,59 @@
   </div>
 </template>
 <script>
-  import { mapActions, mapGetters } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex';
 
   export default {
     name: 'headerlayout',
-    data () {
+    data() {
       return {
         openNotify: false,
         openTasks: false,
         openUsers: false,
         isIn: false,
         userAvatar: '../../static/img/avatar.png',
-        userName: '',
-        noLogin: true
-      }
+        userName: 'admin',
+        noLogin: true,
+      };
     },
     computed: {
       ...mapGetters([
-        'sidebar'
-      ])
+        'sidebar',
+      ]),
     },
     methods: {
       ...mapActions([
-        'toggleSidebar'
+        'toggleSidebar',
       ]),
-      toggler () {
-        this.isIn = !this.isIn
-        this.$emit('is-in', this.isIn)
+      toggler() {
+        this.isIn = !this.isIn;
+        this.$emit('is-in', this.isIn);
       },
-      logout () {
-        const _this = this
+      logout() {
         this.$confirm('确认退出么？', '提示', {
-          type: 'warning'
+          type: 'warning',
         }).then(() => {
-          sessionStorage.removeItem('user')
-          _this.$router.push('/login')
+          sessionStorage.removeItem('user');
+          this.$router.push('/login');
         }).catch((e) => {
-          console.log(e)
-        })
-      }
+          console.log(e);
+        });
+      },
     },
     watch: {
-      $route: 'toggler'
+      $route: 'toggler',
     },
-    mounted () {
-      let user = sessionStorage.getItem('user')
-      user = !!user
+    mounted() {
+      let user = sessionStorage.getItem('user');
+      user = !!user;
       if (user) {
-        this.noLogin = false
-        user = JSON.parse(user)
-        this.userName = user.name || 'admin'
-        this.userAvatar = user.avatar
+        this.noLogin = false;
+        user = JSON.parse(user);
+        this.userName = user.name;
+        this.userAvatar = user.avatar;
       }
-    }
-  }
+    },
+  };
 </script>
 <style lang="scss">
   .hide {
