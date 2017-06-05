@@ -1,0 +1,16 @@
+/*
+  components 自定义css组件基本样式
+  layout 全站公用layout结构样式
+  themes 颜色主题样式，目前只有layout的
+  utils 公共方法
+  variables.scss 变量集合文件
+*/
+
+// 引入需要的库
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome';
+@import '~bootstrap/scss/bootstrap';
+@import './common';
+@import './layout/layout';
+@import './themes/light';
+@import './components/components';

@@ -1,0 +1,8 @@
+@import '../_variables.scss';  // 全局基本变量
+@import '../utils/_mixins.scss'; // 全局mix方法
+@import '_variables.scss'; // layout 变量
+@import '_header.scss';
+@import '_container.scss';
+@import '_sidemenu.scss';
+@import '_content.scss';
+@import '_footer.scss';

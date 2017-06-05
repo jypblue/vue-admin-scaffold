@@ -1,0 +1,35 @@
+.page-404 {
+    margin-top: 100px;
+    text-align: center;
+    .number {
+      position: relative;
+      top: 35px;
+      display: inline-block;
+      letter-spacing: -10px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      line-height: 128px;
+      font-size: 128px;
+      font-weight: 300;
+      color: #7bbbd6;
+      text-align: right;
+      font-family: "Open Sans", sans-serif;
+    }
+    .details {
+      margin-left: 40px;
+      display: inline-block;
+      padding-top: 0px;
+      text-align: left;
+      span {
+        color: #ec8c8c;
+        padding: 0 4px;
+      }
+    }
+    .back-home {
+       color: #4b8df8;
+       cursor: pointer;
+       &:hover{
+         text-decoration: underline;
+       }
+    }
+}

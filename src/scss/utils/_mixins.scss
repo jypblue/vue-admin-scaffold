@@ -1,0 +1,37 @@
+// 通用mixins方法
+// clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+// Opacity
+@mixin opacity($value) {
+    opacity: $value;
+    filter: alpha(opacity=#{$value * 100});
+}
+
+@mixin placeholder($color: $input-color-placeholder) {
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    } // See https://github.com/twbs/bootstrap/pull/11526
+    &:-ms-input-placeholder {
+        color: $color;
+    } // Internet Explorer 10+
+    &::-webkit-input-placeholder {
+        color: $color;
+    } // Safari and Chrome
+}

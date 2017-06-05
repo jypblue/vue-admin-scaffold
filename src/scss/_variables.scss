@@ -1,0 +1,46 @@
+//全站样式基本变量
+$font-family-primary: "Open Sans",
+sans-serif !default;
+$font-family-default: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+// Global textual link color.
+$link-color: #00357d !default;
+// Link hover color.
+$link-hover-color: darken($link-color, 15%) !default;
+//== Forms Controls
+$input-bg: #fff !default;
+$input-bg-disabled: #eeeeee !default;
+$input-color: #333 !default;
+$input-border: #e5e5e5 !default;
+$input-border-focus: #999 !default;
+$input-color-placeholder: lighten($input-color, 50%) !default;
+$input-icon-color: #999 !default;
+// Webkit browser custom scrollbar
+$webkit-scrollbar-width: 12px;
+$webkit-scrollbar-track: #eaeaea;
+$webkit-scrollbar-thumb: #cecece;
+$webkit-scrollbar-thumb-hover: #aaaaaa;
+//Border radius
+$general-border-radius: 4px;
+$form-control-border-radius: 4px;
+$portlet-border-radius: 4px;
+// 媒体查询断点
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1180px !default;
+$screen-lg-med: 1280px !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+//灰白色背景块颜色
+$dark-white:#F9FAFC;
+$danger:#FF4949;
+$ext-light-black: #475669;
+$light-black:#324057;
+$black:#1F2D3D;
+//Extra Light Silver
+$slgihts : #C0CCDA

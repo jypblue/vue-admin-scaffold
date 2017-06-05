@@ -1,0 +1,40 @@
+// layout基本结构字体，宽高，层级等变量
+// header
+$header-height: 46px !default;
+$header-logo-height:40px;
+$header-logo-margin: ($header-height - $header-logo-height) / 2 0 0 0 !default;
+$header-menu-toggler-width: 24px;
+$header-menu-toggler-height: 24px;
+$header-sidebar-toggler-margin: ($header-height - $header-menu-toggler-height) / 2 0 0 0 !default;
+$header-responsive-toggler-margin: ($header-height - $header-menu-toggler-height) / 2 6px 0 6px !default;
+$header-logo-margin: ($header-height - $header-logo-height) / 2 0 0 0 !default;
+$header-top-menu-general-item-padding: 17px 10px 5px 10px !default;
+$header-top-menu-user-item-padding: 10px 6px 7px 8px !default;
+$header-top-menu-icon-font-size: 17px!default;
+$header-top-menu-genneral-item-badge-top:10px !default;
+$header-top-menu-user-dropdown-link-font-size: 14px !default;
+$header-top-menu-user-dropdown-link-font-weight: 300 !default;
+// sidemenu
+$sidebar-width: 235px !default;
+$sidebar-collapsed-width: 45px!default;
+$sidebar-collapsed-submenu-width-on-hover: 210px!default;
+$sidebar-logo-container-width: $sidebar-width !default;
+$sidebar-menu-link-font-size: 14px !default;
+$sidebar-menu-link-icon-font-size: 16px !default;
+$sidebar-menu-head-font-size: 14px !default;
+$sidebar-menu-sub-menu-link-icon-font-size: 14px !default;
+// Page content
+$page-content-min-height: 800px !default;
+$page-content-solid-bg-color: #F1F3FA !default;
+// Page footer
+$page-footer-height: 33px !default;
+// z-index list
+$zindex-header-fixed: 9995!default;
+$zindex-header-static:9995!default;
+$zindex-header-static:9995 !default;
+$zindex-quick-sidebar:9994 !default;
+$zindex-quick-sidebar-full-height: 9996 !default;
+$zindex-sidebar-fixed: 10000 !default;
+$zindex-footer-fixed: 10000 !default;
+$zindex-sidebar-submenu: 2000 !default;
+$zindex-go-to-top: 10001 !default;
